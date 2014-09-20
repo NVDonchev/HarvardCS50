@@ -1,0 +1,48 @@
+0.  BMP supports up to 4 294 967 296 colors;
+    GIF supports  up to 256 colors;
+    JPEG supports up to 16777216 colors;
+    PNG supports up to 281 474 976 710 656 colors;
+    
+1.  GIF format supports animation;
+
+2.  If losseless compression is used, all of the original information that was available before the compression can be retrieved.
+    If lossy compression is used, the image cannot be reversed to the exact state it was before the compression.
+    Information loss is present during the compression;
+    
+3.  JPEG is lossy compressed;
+
+4.  The sectors where the file is are marked as free space.
+    Only the metadata of the hard disk changes, but the file's bits are still present;
+    
+5.  To ensure deleted files cannot be recovered, it is needed to overwrite the sectors where the file bits are.
+    One way is to write zeroes over the bits and another more advanced is to write special sequences of bits.
+    There are many programs on the market that let you do this;
+    
+6.  It's a header file for a library that declares several new types of variables.
+    The already available variables are not good to use sometimes as their size depends on the implementation and the system;
+
+7.  The point is to guarantee that the variables will have exactly the specified number of bits,
+    independant of the system and the implementation. For example, uint32_t will contain exactly 32 bits;
+    
+8.  BYTE has 8 bits, DWORD has 32 bits, LONG has 32 bits and WORD has 16 bits;
+
+9.  The first two bytes in a bmp, identifying the file format are 42 4d (in hexadecimal);
+
+10. bfSize is the size of the whole bitmap file and biSize is the number of bytes needed by BITMAPINFOHEADER structure;
+
+11. A negative biHeight means top-down bmp. It means that in the structure of the file,
+    the first bits representing pixels correspond to the first pixels if the image;
+    
+12. BITMAPINFOHEADER specifies the BMP’s color depth in the biBitCount field;
+
+13. fopen returns NULL if there is an error in trying to open the file for writing.
+
+14. Because it gets only one chunk of data, aka one element at a time;
+
+15. It assigns 1 to padding as the size must be multiple of 4. The closes multiple by 4 to 3 is 3 + 1 = 4;
+
+16. fseek skips the offset bits by specifying the surrent position in the file and the number of bytes to be skipped;
+
+17. SEEK_CUR indicated the current position in the file;
+
+18. Mila Banana dun it.;

@@ -1,0 +1,31 @@
+0.  An example of a 45 letter word. The default max length of words that the speller can work with.
+
+1.  It returns information on the resources used by th program.
+
+2.  There are sixteen members in the struct.
+
+3.  Because that way the actual values of before and after are known instead of values of copies.
+
+4.  The For loop iterates through the file content symbol by symbol. It check the symbol and if it is a letter
+    it appends it to a char*. If there is a digit in the word or the word is too lenghty, it resets the index to 0
+    and continues to iterate to the point where a new word is starting. In case the end of the current word is reached, 
+    it resets the index variable to zero and checks the word's spelling by using the check function.
+    
+5.  Fscanf will cause problems when trying to separate one word from another. 
+    For example if there is a comma or a period after the word, fscanf will count it as part of the word.
+    
+6.  Because the pointers to word and dictionary are not expected to change, 
+    therefor a read-only pointer (const *) is suitable for the job.
+    
+7.  I used Chained hash table to implement the speller. It's composed of an array of node pointers
+    that points to the beginning af a linked list. Each node consists of a char* value
+    and a pointer to the next node in the list.
+    
+8.  It took about 30 seconds to finish the first time it worked correctly.
+
+9.  I have changed the size of the array of node pointers. It was 145000 at first and now it's 12000.
+
+10. Yes. The check function is the slowest part of the program. 
+    I tried to use different approaches when checking if a word is in the dictionary
+    and it didn't change the speed noticeably. I guess more optimization to the Chained hash table will speed
+    the program most, but at this point I don't know how to achieve this.
